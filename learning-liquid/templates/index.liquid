@@ -1,0 +1,30 @@
+<h1>{{ page.title }}</h1>
+<img src="{{ 'shoe.jpg' | asset_url }}" alt="Shoe image">
+
+<p>
+  {% assign number = '1,2,3,4' | split: ',' %}
+  {% for item in number %}
+    {{ item }}
+  {% endfor %}
+</p>
+
+{% for i in (1..number.size) -%}
+  {{ i }}
+{%- endfor %}
+
+<table>
+  {% tablerow str in number %}
+    {{ str }}
+  {% endtablerow %}
+</table>
+
+
+{% for product in collections['frontpage'].products %}
+  <div>
+    <a href="{{product.url}}">
+      <img src="{{ product.featured_image | image_url:width: 200 }}" alt="product images" />
+      <h3>{{- product.title | link_to: product.url }}</h3>
+      <p>{{ product.price | money }}</p>
+    </div>
+  </a>
+{% endfor %}
