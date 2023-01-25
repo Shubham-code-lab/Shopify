@@ -2,13 +2,18 @@
   <head>
     {% comment %} shopify,plugin to inject script {% endcomment %}
     {{ content_for_header }}
+    {{ 'main.css' | asset_url | stylesheet_tag }}
     {{ 'style.css' | asset_url | stylesheet_tag }}
   </head>
   <body>
     {% comment %} template data will be plugin {% endcomment %}
 
+    {% comment %} render files from snippets {% endcomment %}
     {% render 'header' %}
+
+    {% comment %} render files from section {% endcomment %}
+    {% section 'example-header' %}
+
     {{ content_for_layout }}
-    {{ 'script.js' | asset_url | script_tag }}
-  </body>
-</html>
+  {{ 'script.js' | asset_url | script_tag }}
+</body></html>

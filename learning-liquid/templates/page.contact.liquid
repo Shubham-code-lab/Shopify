@@ -1,0 +1,31 @@
+<p>page is avaliable at pages->selct any pages -> now you can set online store theme template [default,contact]</p>
+<p>Below data from shopify pages</p>
+<p>sales channel -> online store -> add pages ->give title and content -> save -> from navigation -> add new navigation</p>
+<h1>{{ page.title }}</h1>
+<div>{{ page.content }}</div>
+
+{% form 'contact' %}
+  {{ form.errors | default_errors }}
+
+  <div class="first-name">
+    <label for="custom-input-text">First name</label>
+    <input
+      type="text"
+      name="contact[custom-input]"
+      id="custom-input-text" />
+  </div>
+
+  <div class="email">
+    <label>Email</label>
+    <input type="email" name="contact[email]">
+  </div>
+
+  <div class="message">
+    <label for="message">Message</label>
+    <textarea name="contact[body]" id="message"></textarea>
+  </div>
+
+  <div class="submit">
+    <input type="submit" value="Create" />
+  </div>
+{% endform %}
