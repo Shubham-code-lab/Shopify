@@ -1,0 +1,14 @@
+{
+    "name": "Template 404",                   
+    "layout": "custom_layout",                //optional using any layout from layout folder 
+    "wrapper": "div#i_am_id.i_am_class[i_am_attribute=hello]", //optional html tag to wrap around these section
+    "sections": {
+        "unique-1-id-404":{             //unique name that we use to order these section
+            "type": "example_1_template_404"
+        },
+        "unique-2-id-404":{
+            "type": "example_2_template_404"
+        }
+    },
+    "order": ["unique-2-id-404","unique-1-id-404"]   //order section using there unique name
+}

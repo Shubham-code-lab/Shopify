@@ -7,9 +7,7 @@
   </head>
   <body>
 
-    {% comment %} render files from snippets {% endcomment %}
-    {% section 'header' %}
-    <div>this layout is from theme.liquid</div>
+    <div>this layout is from custom_layout.liquid</div>
 
     {{ content_for_layout }}
     {{ 'script.js' | asset_url | script_tag }}

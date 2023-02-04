@@ -1,0 +1,41 @@
+<br>
+<div>this value is from locale which is used in example_2_template_404</div>
+<div>{{ 'general.404.title' | t }}</div>
+<div>{{ 'general.404.sub_title' | t }}</div>
+<br>
+<div>this value is from section schema</div>
+<div>{{ section.settings.sTitle }}</div>
+<div>{{ section.settings.sSub_title }}</div>
+<br>
+<div>this is example_2_template_404</div>
+
+{% schema %}
+  {
+    "name": "Template 404",
+    "tag":"section",                  //default is div our section get wrap into this section html tag
+    "class": "flex items-center justify-center text-center py-7 h-screen",  //add this class to the html elment in tag
+    "settings": [
+      {
+        "type": "text",               //type :-
+        "id": "sTitle",                //key :- id using which we acess this property
+        "default": "404",             //value :- default value we can change it in shopify website editor
+        "label": "404 Heading Title"  //label:- whihc is seen in shopify website editor
+      }, {
+        "type": "text",
+        "id": "sSub_title",
+        "default": "The page you are looking for is not found",
+        "label": "404 Heading Sub-Title"
+      },
+      {
+        "type": "text",
+        "id": "button_label",
+        "default": "back to homepage"
+      },
+      {
+        "type":"url",
+        "id":"button_url",
+        "lable":"Button URL"
+      }
+    ]
+  }
+{% endschema %}
