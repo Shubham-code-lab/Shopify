@@ -11,7 +11,9 @@
     {% section 'header' %}
     <div>this layout is from theme.liquid</div>
 
+    <div class="whitespace-nowrap">===================================above template=================================================</div>
     {{ content_for_layout }}
+    <div class="whitespace-nowrap">===================================below template=================================================</div>
     {{ 'script.js' | asset_url | script_tag }}
   </body>
 </html>

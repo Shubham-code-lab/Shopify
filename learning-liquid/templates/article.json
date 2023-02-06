@@ -1,0 +1,28 @@
+{
+    "name": "article Template",                   
+    "sections": {
+        "first-article":{         
+            "type": "template-article",     //from the section
+            "blocks": {
+                "title":{     //unique block id
+                    "type": "article_title"      //same as in section -> template-article.liquid
+                },
+                "author":{
+                    "type":"article_author"
+                },
+                "published_date":{
+                    "type":"article_published_date"
+                },
+                "thumbnail":{
+                    "type": "featured_image"
+                },
+                "content":{
+                    "type": "article_content"
+                }
+
+            },
+            "block_order": ["thumbnail", "title", "author", "published_date", "content"]    //default order but we can change in customizer page
+        }
+    },
+    "order": ["first-article"]
+}

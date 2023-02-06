@@ -1,4 +1,5 @@
 <br>
+
 <div>this value is from locale which is used in example_2_template_404</div>
 <div>{{ 'general.404.title' | t }}</div>
 <div>{{ 'general.404.sub_title' | t }}</div>
@@ -8,6 +9,12 @@
 <div>{{ section.settings.sSub_title }}</div>
 <br>
 <div>this is example_2_template_404</div>
+{% if section.settings.button_url == blank %}
+  {%  assign button_url = shop.secure_url %}
+{% else %}
+  {%  assign button_url = section.settings.button_url %}
+{%endif%}
+<a href="{{button_url}}" class="px-4 inline py-2 text-base font-medium shadow bg-green-600 hover:bg-green-800 text-white">{{section.settings.button_label}}</a>
 
 {% schema %}
   {
@@ -29,12 +36,13 @@
       {
         "type": "text",
         "id": "button_label",
-        "default": "back to homepage"
+        "default": "back to homepage",
+        "label": "Button label"
       },
       {
         "type":"url",
         "id":"button_url",
-        "lable":"Button URL"
+        "label":"Button URL"
       }
     ]
   }

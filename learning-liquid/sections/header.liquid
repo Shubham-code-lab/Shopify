@@ -14,8 +14,6 @@
       <!-- STORE NAME / STORE LOGO -->
       <div class="flex justify-start lg:flex-1 truncate">
         <h1 class="text-xl font-bold truncate">{{ shop.name }}</h1>
-        {{ main_menu_linklist[1].title }}
-        {{ main_menu.links[1].title }}
       </div>
 
       <!-- hamburger mobile menu -->
@@ -151,6 +149,12 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="bg-red">
+      diffrent way i can access link from Navigation
+      {{ main_menu_linklist[1].title }}
+      {{ linklists['main-menu'].links[1].title }}
+      {{ linklists.main-menu.links[1].title }}
     </div>
   </div>
 </div>
