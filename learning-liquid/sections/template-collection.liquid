@@ -1,13 +1,14 @@
 
-<form class="filter-form">
-  {%- for filter in collection.filters -%}
+<form >
+  <input type="hidden" name="sort_by" value="{{ collection.sort_by }}">
+  {%- for filter in collection.filters -%}  
     <details class="filter-group">
       <summary class="filter-group-summary">
         <div>
           <span>{{ filter.label }}</span>
 
           {%- if filter.active_values.size > 0 -%}
-            <span>({{ filter.active_values }})</span>
+            <span>({{ filter.active_values.size }})</span>
           {%- endif -%}
         </div>
       </summary>
@@ -39,7 +40,7 @@
             </ul>
 
             <div class="filter-group-display__submit">
-              <input type="submit" value="Apply">
+              <input type="submit" value="any value Apply">
             </div>
           {%- when 'price_range' -%}
             <div class="filter-group-display__price-range">
@@ -118,6 +119,7 @@
     {% endfor %}
   </select>
 </div>
+<div>current sort {{collection.sort_by}}</div>
 
 <!-- collection display -->
 <div class="px-4 py-8">

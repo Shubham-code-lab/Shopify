@@ -1,0 +1,21 @@
+<form action="{{ routes.search_url }}">
+  <input
+    class="border-2 border-orange-600"
+    type="text"
+    placeholder="Search"
+    name="q"
+    value="{{ search.terms | escape }}" />
+  <input
+    type="hidden"
+    name="type"
+    value="product,page" />
+  <input
+    type="hidden"
+    name="options[unavailable_products]"
+    value="hide" />
+  <input
+    type="hidden"
+    name="options[prefix]"
+    value="last" />
+  <input type="submit" value="Search" />
+</form>
