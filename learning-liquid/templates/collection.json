@@ -1,0 +1,10 @@
+{
+    "name": "argoid collection",
+    // "wrapper": "div.container",
+    "sections": {
+        "argoid-main-collection":{
+            "type": "argoid-collection"
+        }   
+    },
+    "order": ["argoid-main-collection"]
+}

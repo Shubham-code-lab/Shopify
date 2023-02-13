@@ -1,0 +1,37 @@
+{% comment %} <div class="filters"> {% endcomment %}
+<div class="filters__header">
+  <div>Filters</div>
+</div>
+
+<div class="filters__container">
+
+  {% comment %}start unique filter {% endcomment %}
+  <template class="argoid-filter-design">
+    <div class="filter">
+      <hr>
+      <div class="filter__main-title">
+        <p class="argoid-display-name">default</p>
+        <span class="filter__main-toggler--padding">&#x2191;</span>
+      </div>
+      <ul class="argoid-filter filter__type hidden">
+        <li class="filter__type-literal">
+          <input
+            class="argoid-literal-checkBox"
+            type="checkbox"
+            value=""
+            id="">
+          <label for="" class="argoid-literal-label filter__type-title">Default literal</label>
+        </li>
+        <li class="filter__type-numerical">
+          <input
+            type="range"
+            name=""
+            id="">
+        </li>
+      </ul>
+    </div>
+  </template>
+  {% comment %}end unique filter {% endcomment %}
+
+</div>
+{% comment %} </div> {% endcomment %}
